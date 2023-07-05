@@ -20,11 +20,7 @@ class TypesHelper {
 
   isReference(value) {
     if (
-      typeof value === "number" ||
-      typeof value === "string" ||
-      value === false ||
-      value === null ||
-      value === undefined
+     this.isPrimitive(value) // used method here to to avoid repetition
     ) {
       return false;
     }
